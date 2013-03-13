@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/imac.png</file>
+    </qresource>
+</RCC>
