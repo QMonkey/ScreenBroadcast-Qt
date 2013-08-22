@@ -1,6 +1,7 @@
-#include <QtGui/QApplication>
-#include <QtGui/QDesktopWidget>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QDesktopWidget>
 #include <QtGui/QPixmap>
+#include <QtGui/QScreen>
 #include <QtCore/QBuffer>
 #include "constant.h"
 #include "data.h"
@@ -16,8 +17,8 @@ Screenshot::Screenshot(QObject *parent) :
 
 void Screenshot::saveScreen(QByteArray *src)
 {
-    QPixmap pix = QPixmap::grabWindow(QDesktopWidget().screen()->winId(),
-                                      0,0,Data::width,Data::height);
+    QScreen *screen = QApplication::primaryScreen();
+    QPixmap pix = screen->grabWindow(0);
     QBuffer buffer(src);
     pix.save(&buffer,IMAGE_FORMAT);
 }

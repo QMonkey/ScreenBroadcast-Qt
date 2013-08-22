@@ -1,5 +1,5 @@
-#include <QtGui/QApplication>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMessageBox>
 #include "host.h"
 #include "service_mgr.h"
 

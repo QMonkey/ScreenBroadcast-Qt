@@ -14,7 +14,7 @@ signals:
 public slots:
 
 private:
-    void incomingConnection(int handle);
+    void incomingConnection(qintptr handle);
 };
 
 #endif // TCP_HEADERMSG_H

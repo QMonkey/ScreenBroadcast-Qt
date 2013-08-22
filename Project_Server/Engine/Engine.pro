@@ -8,3 +8,5 @@ SOURCES += \
 
 RESOURCES += \
     image.qrc
+
+QT += widgets

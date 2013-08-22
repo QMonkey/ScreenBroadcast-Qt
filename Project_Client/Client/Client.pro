@@ -1,4 +1,5 @@
 QT += network
+QT += widgets
 
 HEADERS += \
     udp_client.h \

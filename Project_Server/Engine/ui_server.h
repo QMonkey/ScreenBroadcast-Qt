@@ -1,7 +1,7 @@
 #ifndef UI_SERVER_H
 #define UI_SERVER_H
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 #include<QtCore/QString>
 #include"ui_dialog.h"
 

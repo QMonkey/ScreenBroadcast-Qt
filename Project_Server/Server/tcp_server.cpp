@@ -11,7 +11,7 @@ TcpServer::TcpServer(QObject *parent) :
 {
 }
 
-void TcpServer::incomingConnection(int handle)
+void TcpServer::incomingConnection(qintptr handle)
 {
     QTcpSocket *socket = new QTcpSocket;
     socket->setSocketDescriptor(handle);

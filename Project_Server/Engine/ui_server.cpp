@@ -1,4 +1,4 @@
-#include<QtGui/QMessageBox>
+#include<QtWidgets/QMessageBox>
 #include<QtCore/QDir>
 #include<QtCore/QProcess>
 #include<QtNetwork/QHostAddress>

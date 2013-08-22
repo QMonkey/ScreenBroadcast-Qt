@@ -7,7 +7,7 @@ TcpServerEnd::TcpServerEnd(QObject *parent) :
 {
 }
 
-void TcpServerEnd::incomingConnection(int handle)
+void TcpServerEnd::incomingConnection(qintptr handle)
 {
     QTcpSocket *socket = new QTcpSocket;
     socket->setSocketDescriptor(handle);

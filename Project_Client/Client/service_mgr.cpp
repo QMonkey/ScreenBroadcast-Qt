@@ -16,11 +16,11 @@ ServiceMgr::ServiceMgr(QObject *parent) :
 void ServiceMgr::startRpt() const
 {
     label->startTimer(REPAINT_TIME_MS);
+    UdpClient *client = new UdpClient;
 }
 
 void ServiceMgr::run()
 {
-    UdpClient client;
     tcp_client->start();
     exec();
 }

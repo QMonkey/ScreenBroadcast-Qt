@@ -11,18 +11,19 @@
 #define UI_DIALOG_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QDialog>
-#include <QtGui/QGridLayout>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
-#include <QtGui/QSpacerItem>
-#include <QtGui/QVBoxLayout>
+#include <QtCore/QCoreApplication>
+#include <QtWidgets/QAction>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
@@ -140,12 +141,12 @@ public:
 
     void retranslateUi(QDialog *Dialog)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Server", 0, QApplication::UnicodeUTF8));
-        server_label_port->setText(QApplication::translate("Dialog", "&Port:", 0, QApplication::UnicodeUTF8));
-        server_label_ip->setText(QApplication::translate("Dialog", "&IP:", 0, QApplication::UnicodeUTF8));
-        server_button_start->setText(QApplication::translate("Dialog", "&Start", 0, QApplication::UnicodeUTF8));
-        server_button_stop->setText(QApplication::translate("Dialog", "St&op", 0, QApplication::UnicodeUTF8));
-        server_button_close->setText(QApplication::translate("Dialog", "&Close", 0, QApplication::UnicodeUTF8));
+        Dialog->setWindowTitle(QApplication::translate("Dialog", "Server", 0, QCoreApplication::UnicodeUTF8));
+        server_label_port->setText(QApplication::translate("Dialog", "&Port:", 0, QCoreApplication::UnicodeUTF8));
+        server_label_ip->setText(QApplication::translate("Dialog", "&IP:", 0, QCoreApplication::UnicodeUTF8));
+        server_button_start->setText(QApplication::translate("Dialog", "&Start", 0, QCoreApplication::UnicodeUTF8));
+        server_button_stop->setText(QApplication::translate("Dialog", "St&op", 0, QCoreApplication::UnicodeUTF8));
+        server_button_close->setText(QApplication::translate("Dialog", "&Close", 0, QCoreApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

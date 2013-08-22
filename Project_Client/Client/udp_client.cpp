@@ -9,7 +9,7 @@
 UdpClient::UdpClient(QObject *parent) :
     QObject(parent),udp_socket(new QUdpSocket(this))
 {
-    udp_socket->bind(QHostAddress("0.0.0.0"),Host::port+1);
+    udp_socket->bind(QHostAddress("127.0.0.1"),Host::port+1);
     connect(udp_socket,SIGNAL(readyRead()),this,SLOT(recv()));
 }
 
@@ -18,7 +18,6 @@ QByteArray UdpClient::rduc(QUdpSocket *socket)
     QByteArray datagram;
     datagram.resize(socket->pendingDatagramSize());
     socket->readDatagram(datagram.data(),datagram.size());
-    //qDebug()<<datagram.size();
     return qUncompress(datagram);
 }
 

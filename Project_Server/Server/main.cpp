@@ -1,5 +1,5 @@
-#include <QtGui/QApplication>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMessageBox>
 #include "host.h"
 #include "service_mgr.h"
 
@@ -14,6 +14,8 @@ int main(int argc,char **argv)
     {
         Host::port = atoi(argv[2]);
         Host::ip_address = argv[1];
+        //Host::ip_address = "0.0.0.0";
+        //Host::host = new QHostAddress(QHostAddress::AnyIPv4);
         Host::host = new QHostAddress(Host::ip_address);
         ServiceMgr *mgr = new ServiceMgr;
         mgr->startService();
